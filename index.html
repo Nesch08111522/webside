@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio & Progetto - Librería</title>
+  <link rel="stylesheet" href="Css/style.css"/>
+  <link rel="icon" href="logo1.ico" type="image/x-icon"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <header class="header">
+    <div style="display: flex; align-items: center;">
+      <img src="logo.ico" alt="Logo de Studio & Progetto" class="logo-img" width="60" height="60">
+      <div class="logo-container">
+        <h1 class="logo-title">Studio & Progetto</h1>
+        <p class="logo-subtitle">Librería y Material Educativo</p>
+      </div>
+    </div>
+    <div class="contact-info">
+      <ul>
+        <li>📞 933 597 152</li>
+        <li>IG - Facebook</li>
+        <li>🕖 7am a 11pm</li>
+      </ul>
+    </div>
+  
+    <div class="cart-icon">
+      <img src="https://www.tailoy.com.pe/static/version1741938615/frontend/Tailoy/default/es_AR/images/n_icono_carrito.png" class="hcart iconappmobile" alt="">
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+  <hr size = "10" color="#191429">
+  <audio src="Jungkook.mp3" preload="none" controls></audio>
+
+  <nav class="nav" id="menu">
+    <ul>
+      <p></p>
+      <li><a href="#ofertas">Ofertas</a></li>
+      <li><a href="#universitarios">¿Qué necesitas?</a></li>
+      <li><a href="#carrito">Carrito</a></li>
+      <li><a href="#envios">Envíos</a></li>
+      <li><a href="#login">Iniciar Sesión</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#politicas">Políticas de Privacidad</a></li>
+      <li><a href="#terminos">Términos y Condiciones</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar productos...">
+      <button type="submit">Buscar</button>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("menu");
+      const overlay = document.getElementById("overlay");
+      nav.classList.toggle("open");
+      overlay.classList.toggle("show");
+    }
+
+    document.getElementById("overlay").addEventListener("click", () => {
+      toggleMenu();
+    });
+  </script>
+
+  <section class="hero">
+    <img src="libreria.webp" alt="Librería" class="hero-img" align="left" width="400" height="300">
+    <h1>Bienvenido a Studio & Progetto</h1>
+    <p><strong>Studio & Progetto</strong> es una librería con esencia europea y alma educativa, donde el diseño, la utilidad y la formación se unen para transformar tu experiencia de estudio, trabajo y crecimiento personal.</p>
+    <p>Encuentra libros por carrera universitaria, materiales escolares por nivel, productos para salud, recursos profesionales y artículos decorativos con buen gusto. Seleccionamos cada producto pensando en personas exigentes, creativas y apasionadas como tú.</p>
+    <p><strong>¡Explora nuestras secciones y haz de cada compra una inspiración!</strong></p>
+  </section>
+
+  <hr size = "10" color="#191429">
+
+  <section class="productos ofertas-especiales" id="ofertas">
+    <h2 style="color: #4e2710;">🎉 Ofertas Especiales que Inspiran</h2>
+    <h3 style="color: #333;">🎓 Estudiante universitario, ¡esto es para ti!</h3>
+    <p style="font-weight: bold; color: #444;">📚 Muéstranos tu carnet y recibe <span style="color:#007bff;">cupones de descuento</span> exclusivos.</p>
+    <p style="color: #666;" >Descuentos pensados para quienes estudian, enseñan o trabajan con pasión. ¡Haz que cada sol cuente!</p>
+
+    <div class="grid">
+      <div class="card" style="background: #fff0f5;">
+        <img src="ofertas.webp" alt="Pack de libros en oferta">
+        <h3 style="color: #99004d;">📦 Packs Académicos</h3>
+        <p>Libros + papelería seleccionada a precio especial. Estudia con estilo, invierte con inteligencia.</p>
+      </div>
+
+      <div class="card" style="background: #f0f8ff;">
+        <img src="ofertas1.webp" alt="Papelería en descuento">
+        <h3 style="color: #0066cc;">✏️ Papelería con Descuento</h3>
+        <p>Resaltadores, planners, lapiceros y más con hasta <strong>30% OFF</strong>. Tu espacio de estudio lo agradecerá.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <section id="universitarios">
+    <h2 style="text-align: center;">¿Qué necesitas?</h2>
+    <div class="grid">
+  
+      <div class="card" onclick="mostrarTablaDerecho()">
+        <img src="derecho.webp" alt="Derecho">
+        <h3>Derecho</h3>
+        <p>Códigos, doctrina, carpetas, resaltadores, todo para tu formación jurídica.</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaArquitectura()">
+        <img src="arquitectura.webp" alt="Arquitectura">
+        <h3>Arquitectura e Ingeniería</h3>
+        <p>Compases, escalímetros, papelería técnica, planos y herramientas para diseño.</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaSalud()">
+        <img src="medicina.webp" alt="Medicina">
+        <h3>Ciencias de la Salud</h3>
+        <p>Atlas, agendas clínicas, instrumentos y manuales médicos.</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaOficina()">
+        <img src="oficina.webp" alt="Oficina">
+        <h3>Oficina y Profesionales</h3>
+        <p>Agendas premium, libretas, planners, lapiceros de lujo y sets de escritorio.</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaImpresiones()">
+        <img src="impresiones.webp" alt="Impresiones">
+        <h3>Impresiones</h3>
+        <p>Impresiones, escaneos, copias y más.</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaInicial()">
+        <img src="inicialprimaria.webp" alt="Material Inicial">
+        <h3>Inicial, Primaria y Secundaria</h3>
+        <p>Plastilinas, cuentos, témperas, juegos didácticos, recursos escolares, cuadernos, libros por materias, kits de geometría y mochilas</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaNinos()">
+        <img src="jugando.webpn.jpeg" alt="Juguetes Educativos">
+        <h3>Material Didáctico</h3>
+        <p>Juegos, cuentos ilustrados, Montessori, rompecabezas y más.</p>
+      </div>
+  
+      <div class="card" onclick="mostrarTablaDecoracion()">
+        <img src="regalos.webp" alt="Decoración y Regalos">
+        <h3>Decoración y Regalos</h3>
+        <p>Cuadros, artículos decorativos, regalos personalizados y más.</p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+  <!-- Sección Derecho -->
+  <section class="tabla-container" id="tabla-derecho">
+    <h2 class="section-title">Productos para Derecho</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Código Penal</td>
+          <td>Edición comentada con jurisprudencia actualizada.</td>
+          <td>S/ 120.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Diccionario Jurídico</td>
+          <td>Definiciones legales y terminología especializada.</td>
+          <td>S/ 85.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Carpeta Abogados</td>
+          <td>Carpeta de lujo para llevar tus documentos.</td>
+          <td>S/ 45.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Sección Arquitectura -->
+  <section class="tabla-container" id="tabla-arquitectura">
+    <h2 class="section-title">Productos para Arquitectura</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Escalímetro</td>
+          <td>Escalímetro profesional para dibujo arquitectónico.</td>
+          <td>S/ 35.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Compás</td>
+          <td>Compás de alta precisión.</td>
+          <td>S/ 50.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Planas de Arquitectura</td>
+          <td>Planas A2 y A3 de alta calidad.</td>
+          <td>S/ 120.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="tabla-container" id="tabla-salud">
+    <h2 class="section-title">Productos para Ciencias de la Salud</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Atlas Anatómico</td>
+          <td>Atlas detallado del cuerpo humano.</td>
+          <td>S/ 150.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Agenda Clínica</td>
+          <td>Agenda para control de pacientes.</td>
+          <td>S/ 65.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Manual Médico</td>
+          <td>Guía de diagnóstico y tratamiento rápido.</td>
+          <td>S/ 95.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+
+  <section class="tabla-container" id="tabla-oficina">
+    <h2 class="section-title">Productos para Oficina y Profesionales</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Agenda Premium</td>
+          <td>Agenda elegante de tapa dura.</td>
+          <td>S/ 55.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Set de Escritorio</td>
+          <td>Set con lapicero, regla y porta notas.</td>
+          <td>S/ 70.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Planner Profesional</td>
+          <td>Planificador semanal y mensual.</td>
+          <td>S/ 60.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <section class="tabla-container" id="tabla-impresiones">
+  <h2 class="section-title">Servicios de Impresión</h2>
+  <table class="tabla-productos">
+    <thead>
+      <tr>
+        <th>Servicio</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Disponible</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Impresión B/N</td>
+        <td>Por hoja A4 (texto o imágenes simples)</td>
+        <td>S/ 0.30</td>
+        <td>Inmediato</td>
+      </tr>
+      <tr>
+        <td>Impresión a Color</td>
+        <td>Por hoja A4 con gráficos o fotos</td>
+        <td>S/ 1.00</td>
+        <td>Inmediato</td>
+      </tr>
+      <tr>
+        <td>Escaneado</td>
+        <td>Archivo PDF o JPG, por hoja</td>
+        <td>S/ 0.80</td>
+        <td>Inmediato</td>
+      </tr>
+      <tr>
+        <td>Copias</td>
+        <td>Copias B/N por hoja</td>
+        <td>S/ 0.30</td>
+        <td>Inmediato</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+  <section class="tabla-container" id="tabla-inicial">
+    <h2 class="section-title">Material Escolar por Niveles</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Témperas</td>
+          <td>Set de colores básicos y metálicos.</td>
+          <td>S/ 20.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Cuentos Infantiles</td>
+          <td>Colección ilustrada para lectura inicial.</td>
+          <td>S/ 30.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Kit de Geometría</td>
+          <td>Compás, escuadras, transportador y regla.</td>
+          <td>S/ 25.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+
+  <section class="tabla-container" id="tabla-ninos">
+    <h2 class="section-title">Material Didáctico y Educativo</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juego Montessori</td>
+          <td>Material sensorial y de desarrollo cognitivo.</td>
+          <td>S/ 40.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Rompecabezas</td>
+          <td>Rompecabezas educativos de madera.</td>
+          <td>S/ 35.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Cuentos Ilustrados</td>
+          <td>Cuentos con grandes ilustraciones y textos simples.</td>
+          <td>S/ 28.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+  <section class="tabla-container" id="tabla-decoracion">
+    <h2 class="section-title">Decoración y Regalos</h2>
+    <table class="tabla-productos">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cuadro Decorativo</td>
+          <td>Cuadro con frases motivacionales.</td>
+          <td>S/ 45.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Set de Regalos</td>
+          <td>Incluye vela aromática, libreta y bolígrafo.</td>
+          <td>S/ 60.00</td>
+          <td>En stock</td>
+        </tr>
+        <tr>
+          <td>Taza Personalizada</td>
+          <td>Taza con nombre o frase a elección.</td>
+          <td>S/ 35.00</td>
+          <td>En stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+
+  <script>
+    function mostrarTablaDerecho() {
+      // Obtener el contenedor de la tabla
+      var tabla = document.getElementById('tabla-derecho');
+      
+      // Mostrar la tabla cuando se haga clic en la imagen
+      tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+   <script>
+    function mostrarTablaArquitectura() {
+      // Obtener el contenedor de la tabla
+      var tabla = document.getElementById('tabla-arquitectura');
+      
+      // Mostrar la tabla cuando se haga clic en la imagen
+      tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+<script>
+  function mostrarTablaSalud() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-salud');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarTablaOficina() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-oficina');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarTablaSalud() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-salud');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarTablaImpresiones() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-impresiones');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarTablaInicial() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-inicial');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarTablaNinos() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-ninos');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+<script>
+  function mostrarTablaDecoracion() {
+    // Obtener el contenedor de la tabla
+    var tabla = document.getElementById('tabla-decoracion');
+    
+    // Mostrar la tabla cuando se haga clic en la imagen
+    tabla.style.display = tabla.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+  <br>
+  <hr size = "10" color="#191429">
+  <section class="productos" id="nosotros">
+    <h2>Nosotros</h2>
+    <p><strong>Studio & Progetto</strong> nació con la visión de unir educación, diseño y funcionalidad. Somos una librería moderna que ofrece soluciones para cada etapa académica y profesional, desde la infancia hasta la adultez.</p>
+    <p>Seleccionamos lo mejor en libros, materiales y artículos con estilo para ayudarte a construir tu camino. Más que productos: creamos una experiencia.</p>
+  </section>
+
+  <section class="productos" id="politicas">
+    <h2>Políticas de Privacidad</h2>
+    <p>Tu privacidad es importante para nosotros. Consulta nuestras políticas aquí.</p>
+  </section>
+
+  <section class="productos" id="terminos">
+    <h2>Términos y Condiciones</h2>
+    <p>Lee nuestros términos y condiciones antes de realizar una compra.</p>
+  </section>
+
+ 
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Columna del Logo -->
+            <div class="footer-column logo-column">
+                <img src="logo2.ico" alt="Studio & Progetto Logo" class="footer-logo">
+            </div>
+            <!-- Columna 1 -->
+            <div class="footer-column">
+              <h3>Contacto</h3>
+              <ul>
+                  <li>📞 Teléfono: 933 597 152</li>
+                  <li>📧 Email: contacto@studio-progetto.com</li>
+                  <li>🕖 Horarios: Lunes a Sábado, 7am - 11pm</li>
+              </ul>
+          </div>
+  
+          <!-- Columna de Enlaces Rápidos -->
+          <div class="footer-column">
+              <h3>Enlaces Rápidos</h3>
+              <ul>
+                  <li><a href="#ofertas">Ofertas Especiales</a></li>
+                  <li><a href="#universitarios">¿Qué Necesitas?</a></li>
+                  <li><a href="#carrito">Carrito de Compras</a></li>
+                  <li><a href="#envios">Envíos</a></li>
+                  <li><a href="#login">Iniciar Sesión</a></li>
+              </ul>
+          </div>
+  
+          <!-- Columna de Redes Sociales -->
+          <div class="footer-column">
+              <h3>Redes Sociales</h3>
+              <ul class="footer-social-icons">
+                  <li><a href="https://www.instagram.com/danielae.g_97?igsh=MXZuYWZ5aTE2NXRydw==" target="_blank">Instagram</a></li>
+                  <li><a href="https://www.facebook.com/share/193qHXhGXg/" target="_blank">Facebook</a></li>
+                  <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                  <li><a href="https://www.linkedin.com/company/studio-progetto" target="_blank">LinkedIn</a></li>
+              </ul>
+          </div>
+  
+          <!-- Columna de Información Adicional -->
+          <div class="footer-column">
+              <h3>Información Adicional</h3>
+              <ul>
+                  <li><a href="#politicas">Políticas de Privacidad</a></li>
+                  <li><a href="#terminos">Términos y Condiciones</a></li>
+                  <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <p>&copy; 2025 Studio & Progetto. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+</body>
+</html>
+
+  
+ 
